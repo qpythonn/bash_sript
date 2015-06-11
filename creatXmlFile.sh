@@ -4,10 +4,11 @@
 # arg1 is the path to the pnfs directory we want to use the listOfFiles.sh script
 # arg2 is the name of template.xml
 # arg3 is optionnal will set a max number of file to put in the xml
+# example source creatXmlFile.sh /pnfs/iihe/cms/store/user/fblekman/TopTree/TopTree74v1/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/crab_TOPTREE-WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8-RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1-MINIAODSIM--TopTree74v1--MCRUN2_74_V9-All/150610_100438/0000 WToLNuTemplate.xml 10
 
 
 # put all the files in a text files with the 
-source listOfFiles.sh $1 root > listout.txt
+source listOfDccapFiles.sh $1 root > listout.txt
 
 # if arg3 is set, the maximum number of file is set to $arg3
 if [[ $3 ]]

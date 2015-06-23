@@ -11,7 +11,7 @@ source $VO_CMS_SW_DIR/cmsset_default.sh
 cmsenv
 source /cvmfs/cms.cern.ch/crab3/crab.sh
 
-for crabsamplename in `ls crab_projects`
+for crabsamplename in `ls $PWD/crab_projects`
 do
     echo $crabsamplename
     crab status crab_projects/$crabsamplename > temptextfile.txt

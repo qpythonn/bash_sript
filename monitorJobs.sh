@@ -53,14 +53,14 @@ done
 
 #done
 
-echo "| *status* | *dataset name* | *number events* | *xsec* | *user* | *path (drill deeper into this directory to get the toptree files)* | "
-cat done.txt
-echo ""
-echo "| *status* | *dataset name* | *number events* | *xsec* | *user* | *path (drill deeper into this directory to get the toptree files)* | "
-cat ongoing.txt
-echo ""
-echo "| *status* | *dataset name* | *number events* | *xsec* | *user* | *path (drill deeper into this directory to get the toptree files)* | "
-cat badsamples.txt
+#echo "| *status* | *dataset name* | *number events* | *xsec* | *user* | *path (drill deeper into this directory to get the toptree files)* | "
+#cat done.txt
+#echo ""
+#echo "| *status* | *dataset name* | *number events* | *xsec* | *user* | *path (drill deeper into this directory to get the toptree files)* | "
+#cat ongoing.txt
+#echo ""
+#echo "| *status* | *dataset name* | *number events* | *xsec* | *user* | *path (drill deeper into this directory to get the toptree files)* | "
+#cat badsamples.txt
 
 
 

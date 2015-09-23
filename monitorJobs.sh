@@ -1,6 +1,7 @@
 # macro to get the status of all the crab jobs under the "crab_projects directory"
 # syntax: source monitorJobs.sh
-#
+# This macro is not used to its full potential!!!
+# FIXME!!
 
 #!/bin/bash
 
@@ -13,6 +14,9 @@ source /cvmfs/cms.cern.ch/crab3/crab.sh
 
 for crabsamplename in `ls $PWD/crab_projects`
 do
+    echo "---------------"
+    echo "---------------"
+    echo ""
     echo $crabsamplename
     crab status crab_projects/$crabsamplename > temptextfile.txt
     if ["`grep COMPLETED temptextfile.txt`" -n ] ; then

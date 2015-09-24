@@ -3,7 +3,7 @@
 # arg1 is the path to the directory from which we want to copy
 # arg2 is the path to the directory in which we want to copy
 # arg3 is the string that each file to be copied should contained in their names (typically "root")
-# arg4 one set to "merge" hadd will be called for all root files in the $2 directory
+# arg4 When arg4 is = "merge", all root files in the $2 directory will be "hadd" and then erased.
 
 # first creat the list of command
 source createListOfCmd.sh $1 $2 $3 > preAwk.txt
@@ -28,6 +28,7 @@ then
 	cd $2
 	echo "merging all root files using hadd"
 	hadd all.root *.root
+	rm -f Jet*.root
 	cd -
     fi
 fi

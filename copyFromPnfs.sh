@@ -29,7 +29,7 @@ then
 	cd $2
 	echo "merging all root files using hadd"
 	hadd all.root *.root
-	print "removing all 'sub'root files !!"
+	echo "removing all 'sub'root files !!"
 	rm -f Jet*.root
 	cd -
     fi

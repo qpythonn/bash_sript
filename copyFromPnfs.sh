@@ -28,8 +28,9 @@ then
     then
 	cd $2
 	echo "merging all root files using hadd"
-	hadd all.root *.root
-	echo "removing all 'sub'root files !!"
+	hadd -f all.root Jet*.root
+	echo "removing all 'sub'root files but one"
+	mv *_1.root single.root
 	rm -f Jet*.root
 	cd -
     fi

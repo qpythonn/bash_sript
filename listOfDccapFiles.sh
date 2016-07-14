@@ -2,24 +2,48 @@
 #Syntax:
 # source listOfFiles.sh arg1 arg2
 # arg1 is the path to the directory in which we want to ls
-# arg2 is an optionnal argument allowing to search for file containing "arg2" in their names 
-#
+# arg2 is the path to the target directory in which we want to copy the list of ile
+# arg3 is an optionnal argument allowing to search for file containing "arg2" in their names 
 
-S_dccap="dcap://maite.iihe.ac.be/"
-Slash='/'
-
-if [[ $2 ]]
+if [ -f "$2/files.txt" ]
 then
-    for file in `ls $1 | grep $2`
+    echo "files.txt exist!"
+    echo "Deleting old file ..."
+    rm -f $2/files.txt
+fi
+
+
+if [ -f "$2/all.root" ]
+then
+    echo "all.root exist!"
+    echo "Deleting old file ..."
+    rm -f $2/all.root
+fi
+
+
+# make the txt file containing all the files
+if [[ $3 ]]
+then
+    for file in `ls $1 | grep $3`
     do
-	echo $S_dccap$1$Slash$file
+	printf "dcap://maite.iihe.ac.be/$1$file " >> $2/files.txt
     done    
 fi
 
-if [[ ! $2 ]]
+if [[ ! $3 ]]
 then
     for file in `ls $1`
     do
-	echo $S_dccap$1$Slash$file
+	printf "dcap://maite.iihe.ac.be/$1$file " >> $2/files.txt
     done    
 fi
+
+
+
+
+
+# hadding
+rootfiles=`cat $2/files.txt`
+
+hadd $2/all.root $rootfiles
+

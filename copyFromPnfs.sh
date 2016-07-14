@@ -6,8 +6,10 @@
 # arg4 When arg4 is = "merge", all root files in the $2 directory will be "hadd" and then erased.
 # example source copyFromPnfs.sh /pnfs/iihe/cms/store/user/qpython/BTagging/FastSimStudy/TTJets_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/crab_TagVarInfo_FastSim_CMSSW748_Premix/150923_153827/0000/ /user/qpython/fromPnfs/CMSSW_748/crab_TagVarInfo_FastSim_CMSSW748_Premix root merge
 
+
+
 # first creat the list of command
-source createListOfCmd.sh $1 $2 $3 > preAwk.txt
+source ~/Git/bash_sript/createListOfCmd.sh $1 $2 $3 > preAwk.txt
 
 # remove unnecessary line
 awk '/^dccp/' preAwk.txt > postawk.txt

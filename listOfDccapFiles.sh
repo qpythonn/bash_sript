@@ -1,6 +1,6 @@
 # This is a small macro to list all the files contained in a directory.
 #Syntax:
-# source listOfFiles.sh arg1 arg2
+# source listOfFiles.sh arg1 arg2 [arg3]
 # arg1 is the path to the directory in which we want to ls
 # arg2 is the path to the target directory in which we want to copy the list of ile
 # arg3 is an optionnal argument allowing to search for file containing "arg2" in their names 
